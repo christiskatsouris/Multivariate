@@ -6,7 +6,7 @@
 
 Consider the following model for the excess returns 
 
-$$Z_{it} = \alpha_i + \beta_i Z_{mt} + \epsilion_{it}$$,  
+$$Z_{it} = \alpha_i + \beta_i Z_{mt} + \epsilon_{it}$$,  
 
 
 # II. Vector Autoregression Model: Estimation and Inference
