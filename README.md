@@ -78,5 +78,5 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 # II. Vector Autoregression Model: Estimation and Inference
 
 
-# III. Pooling Cross-Section and Time-Series Data: Realized Volatility  
+# III. Pooling Cross-Section and Time-Series: Realized Volatility  
 
