@@ -70,7 +70,7 @@ ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="
 
 ```
 
-### Reference
+### References
 
 Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
 
@@ -78,5 +78,10 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
+
+
+### References
+
+Andrews, Donald WK. "Cross‐section regression with common shocks." Econometrica 73.5 (2005): 1551-1585. 
 
 # III. Vector Autoregression Model: Estimation and Inference
