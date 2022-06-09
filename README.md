@@ -77,4 +77,6 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
+A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
+
 # III. Vector Autoregression Model: Estimation and Inference
