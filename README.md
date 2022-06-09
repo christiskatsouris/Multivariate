@@ -14,7 +14,7 @@ We estimate the above multivariate CAPM model asset by asset using Ordinary Leas
 
 ```R
 
-#IMPORT DATASET
+# IMPORT DATASET
 mydata <- read.csv("DATASET.csv",header=T)
 
 # CONSTRUCT Y MATRIX
@@ -57,8 +57,19 @@ coeftest(mvmod, vcov = vcovHAC(mvmod))
 w <- 1/rm_rf
 mvmod <- lm(Y ~ rm_rf, weights=w, data=mydata)
 
+```
+
+### Task 1
+
+Write your own code to calcualte the Constrained Likelihood-function and then obtain the log-likelihood test statistic. The statistic can be estimated as below. 
+
+```R
+
+log.likelihood.test<- (T)*( log(det(sigma_hat_star))- log(det(sigma_hat)) )
+ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="Interval Estimation on the grid[-2,2]")
 
 ```
+
 
 # II. Vector Autoregression Model: Estimation and Inference
 
