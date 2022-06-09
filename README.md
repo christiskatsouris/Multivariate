@@ -61,11 +61,11 @@ mvmod <- lm(Y ~ rm_rf, weights=w, data=mydata)
 
 ### Task 1
 
-Write your own code to calcualte the Constrained Likelihood-function and then obtain the log-likelihood test statistic. The statistic can be estimated as below. 
+Write your own code that provides estimates for the Unconstrained and Constrained Likelihood-function for the multivariate CAPM model. Using your procedure, obtain the log-likelihood test statistic for testing the assumptions of the Black CAPM model.  
 
 ```R
 
-log.likelihood.test<- (T)*( log(det(sigma_hat_star))- log(det(sigma_hat)) )
+log.likelihood.test <- (T)*( log(det(sigma_hat_star))- log(det(sigma_hat)) )
 ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="Interval Estimation on the grid[-2,2]")
 
 ```
