@@ -61,7 +61,7 @@ mvmod <- lm(Y ~ rm_rf, weights=w, data=mydata)
 
 ### Task 1
 
-Write your own code that provides estimates for the Unconstrained and Constrained Likelihood-function for the multivariate CAPM model. Using your procedure, obtain the log-likelihood test statistic for testing the assumptions of the Black CAPM model.  
+Write your own code that provides estimates for the Unconstrained and Constrained Likelihood-function for the multivariate CAPM model. Using your coding procedure, obtain the log-likelihood statistic for testing the assumptions of the Black CAPM model.  
 
 ```R
 
