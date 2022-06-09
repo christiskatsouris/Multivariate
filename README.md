@@ -70,6 +70,10 @@ ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="
 
 ```
 
+### Reference
+
+Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
+
 
 # II. Vector Autoregression Model: Estimation and Inference
 
