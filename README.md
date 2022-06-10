@@ -1,5 +1,7 @@
 # Multivariate
 
+Learning Objectives: The main focus of this teaching page is to present some key applications which consider multivariate time series. Although the stochastic properties of such time series (e.g., stationary versus nonstationary) requires different techniques when considering statistical estimation and inference, here we examine some tools from the statistical point of view in terms of the dimensions of the problem rather than the stochastic properties of the data.  
+
 # I. Likelihood-Based Inference: Multivariate CAPM Model
 
 ## Example 1
