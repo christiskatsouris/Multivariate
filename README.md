@@ -79,9 +79,24 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
 
+# Example
 
-### References
+Consider a Lasso estimation for the cross-sectional Realized Volatility measures of S&P500 with a dependent variable the Realized Volatility measures of a particular firm. 
 
-Andrews, Donald WK. "Cross‐section regression with common shocks." Econometrica 73.5 (2005): 1551-1585. 
+```R
 
-# III. Vector Autoregression Model: Estimation and Inference
+# Lasso estimation step
+cv <- cv.glmnet(x,y,alpha=1,nfolds=10)
+l  <- cv$lambda.min
+alpha <- 1
+
+fits <- glmnet( x, y, family="gaussian", alpha=alpha, nlambda=100)
+
+res <- predict(fits, s=l, type="coefficients")
+res <- as.matrix( res )
+
+
+```
+
+
+
