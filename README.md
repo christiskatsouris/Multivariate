@@ -2,7 +2,9 @@
 
 Learning Objectives: The main focus of this teaching page is to present some key applications which consider multivariate time series. Although the stochastic properties of such time series (e.g., stationary versus nonstationary) requires different techniques when considering statistical estimation and inference, here we examine some tools from the statistical point of view in terms of the dimensions of the problem rather than the stochastic properties of the data.  
 
-# I. Likelihood-Based Inference: Multivariate CAPM Model
+# I. Likelihood-Based Inference
+
+## A. Multivariate CAPM Model
 
 ## Example 1
 
@@ -81,7 +83,7 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
 
-# Example
+## Example 2
 
 Consider a Lasso estimation for the cross-sectional Realized Volatility measures of S&P500 with a dependent variable the Realized Volatility measures of a particular firm. 
 
