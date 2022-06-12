@@ -79,6 +79,16 @@ ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="
 Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
 
 
+## B. Multivariate Linear Regression Model
+
+Consider the gollowing multivariate linear regression model 
+
+$$y_t = A x_t + u_t$$
+
+where yt is a d-dimensional vector of dependent variables and xt is is p-dimensional vector of exogenous variables such that 
+
+$$u_t = R u_{t-1} + \varepsilon_t, \ \ t = 1,...,n.$$
+
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
