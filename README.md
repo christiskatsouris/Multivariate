@@ -93,6 +93,11 @@ Then, the likelihood function is given by
 
 $$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - (n-1) }{ 2 } } e^{ - \frac{1}{2} \sum \epsilon_t^{\prime} \Omega_n^{-1}  \epsilon_t }.$$
 
+### References
+
+Henshaw Jr, R. C. (1966). Testing single-equation least squares regression models for autocorrelated disturbances. Econometrica: Journal of the Econometric Society, 646-660.
+
+
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
