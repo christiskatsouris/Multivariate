@@ -91,7 +91,7 @@ $$u_t = R u_{t-1} + \varepsilon_t, \ \ \ t = 1,...,n.$$
 
 Then, the likelihood function is given by 
 
-$$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - (n-1) }{ 2 } } exp \left\{ - \frac{1}{2} \sum \epsilon_t^{\prime} \Omega_n^{-1}  \epsilon_t \right\}.$$
+$$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - (n-1) }{ 2 } } e^{ - \frac{1}{2} \sum \epsilon_t^{\prime} \Omega_n^{-1}  \epsilon_t }.$$
 
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
