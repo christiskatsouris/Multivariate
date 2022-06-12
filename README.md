@@ -93,7 +93,15 @@ Then, the likelihood function is given by
 
 $$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - (n-1) }{ 2 } } e^{ - \frac{1}{2} \sum \epsilon_t^{\prime} \Omega_n^{-1}  \epsilon_t }.$$
 
+
+### Task 2
+
+Consider an adding-up multivariate linear regression model and write code to obtain the maximum likelihood estimation for testing appropriate linear restricitions on the parameters of the model. 
+
+
 ### References
+
+Berndt, E. R., & Savin, N. E. (1975). Estimation and hypothesis testing in singular equation systems with autoregressive disturbances. Econometrica: Journal of the Econometric Society, 937-957.
 
 Henshaw Jr, R. C. (1966). Testing single-equation least squares regression models for autocorrelated disturbances. Econometrica: Journal of the Econometric Society, 646-660.
 
