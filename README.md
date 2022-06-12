@@ -83,11 +83,15 @@ Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a
 
 Consider the gollowing multivariate linear regression model 
 
-$$y_t = A x_t + u_t$$
+$$y_t = A x_t + u_t, \ \ \ t = 1,...,n.$$
 
 where yt is a d-dimensional vector of dependent variables and xt is is p-dimensional vector of exogenous variables such that 
 
-$$u_t = R u_{t-1} + \varepsilon_t, \ \ t = 1,...,n.$$
+$$u_t = R u_{t-1} + \varepsilon_t, \ \ \ t = 1,...,n.$$
+
+Then, the likelihood function is given by 
+
+$$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - (n-1) }{ 2 } } \mathsf{exp} \left\{ - \frac{1}{2} \sum_{t=2}^n \varepsilon_t^{\prime} \Omega_n^{-1}  \varepsilon_t \right\}.$$
 
 # II. Pooling Cross-Section and Time-Series: Realized Volatility  
 
