@@ -116,15 +116,19 @@ Notice that the usual OLS estimators operate under the assumptuon that the ut's 
 
 Consider the time-series regression model with autoregressive error structure as below
 
-$$y_t = x_t^{\top} \beta + u_t, \ \ u_t = \rho u_{t-1} + \epsilon_t, \ \ \ \text{for} \ t =1,...,n.$$
+$$y_t = x_t^{\top} \beta + u_t, \ \ u_t = \rho u_{t-1} + v_t, \ \ \ \text{for} \ t =1,...,n.$$
 
 Next, consider the multivariate version of the above model such that
 
-$$Y_t = B X_t + U_t, \ \ U_t = R u_{t-1} + V_t, \ \ \ \text{for} \ t =1,...,n.$$
+$$Y_t = B X_t + U_t, \ \ U_t = R U_{t-1} + V_t, \ \ \ \text{for} \ t =1,...,n.$$
 
 ### Task 3
 
 Using a time-series dataset of your choice and by fitting the above model obtain the estimate of the coefficient matrix B.
+
+### References
+
+- Lee, J., & Lund, R. (2004). Revisiting simple linear regression with autocorrelated errors. Biometrika, 91(1), 240-245.
 
 ## B. Pooling Cross-Section and Time-Series (Lasso Estimation)  
 
