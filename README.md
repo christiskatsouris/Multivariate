@@ -121,8 +121,13 @@ A commonly used approach for modelling cross-sectional time series data, such as
 
 Consider a Lasso estimation for the cross-sectional Realized Volatility measures of S&P500 with a dependent variable the Realized Volatility measures of a particular firm. Then, the cross-section predictive regression model for an h-period forecast horizon is given by 
 
-$$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \beta^{\top} X_{j,t}  + \epsilon_{i, t+h}, \ \ \ \text{for} \ \ t = 1,...,n.$$ 
+$$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \beta_{ij}^{\top} X_{j,t}  + \epsilon_{i, t+h}, \ \ \ \text{for} \ \ t = 1,...,n.$$ 
 
+When the number of cross-sectional units N is large we assume a sparse structure for the parameter vector and for estimation purposes we consider a penalised estimation approach.  
+
+### Task 3 
+
+Write your own code in R to estimate the one-period ahead forecasts for each of the firm of the cross-section with covariates being the set of Realized Volatility measures of the other firms (that is, at lag 1 day, lag 1 week, and lag 1 month - in trading days), except of the ones for the i-th firm, using a Lasso shrinkage norm and an appropriate penalty function. Some indicative R code is given below. 
 
 ```R
 
