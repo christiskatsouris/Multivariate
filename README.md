@@ -101,14 +101,17 @@ Consider an adding-up multivariate linear regression model and write code to obt
 
 ### References
 
-Berndt, E. R., & Savin, N. E. (1975). Estimation and hypothesis testing in singular equation systems with autoregressive disturbances. Econometrica: Journal of the Econometric Society, 937-957.
+- Berndt, E. R., & Savin, N. E. (1975). Estimation and hypothesis testing in singular equation systems with autoregressive disturbances. Econometrica: Journal of the Econometric Society, 937-957.
 
-Henshaw Jr, R. C. (1966). Testing single-equation least squares regression models for autocorrelated disturbances. Econometrica: Journal of the Econometric Society, 646-660.
+- Henshaw Jr, R. C. (1966). Testing single-equation least squares regression models for autocorrelated disturbances. Econometrica: Journal of the Econometric Society, 646-660.
 
 # II. Regression-Based Estimation and Inference
 
 ## A. Time-Series Regression with Autoregressive Errors 
 
+Consider the time-series regression model below
+
+$$y_t = x_t^{\top} \beta + u_t, \ \ u_t = \rho u_{t-1} + \epsilon_t, \ \ \ \text{for} \ t =1,...,n.$$
 
 ## B. Pooling Cross-Section and Time-Series (Lasso Estimation)  
 
@@ -120,18 +123,97 @@ Consider a Lasso estimation for the cross-sectional Realized Volatility measures
 
 ```R
 
-# Lasso estimation step
+# Example 2.1: Consider the HAR model which is suitable for modelling Realized Volatility measures
+
+install.packages("HARModel")
+library(HARModel)
+
+data("SP500RM")
+attach( data("SP500RM") )
+SP500rv = SP500RM$RV
+
+# Estimate the HAR model:
+FitHAR   <- HARestimate(vRealizedMeasure = SP500rv, vLags = c(1,5,22))
+SP500rv  <- SP500RM$RV
+SP500bpv <- SP500RM$BPV
+vJumpComponent <- SP500rv - SP500bpv
+vJumpComponent <- ifelse(vJumpComponent>=0, vJumpComponent, 0)
+
+# Estimate the HAR-J model:
+FitHARJ <- HARestimate(vRealizedMeasure = SP500rv, vJumpComponent = vJumpComponent, vLags = c(1,5,22), vJumpLags = c(1,5,22), type = "HARJ")
+
+```
+
+In practise, the main difficulty of the data structure for commonly used Realized Volatility measures is that due to the high frequency of observations, the time indicator is given to hours, minitues and seconds which requires to convert the dataset into a different format.    
+
+```R
+
+# Input the dataset with the RVs of all firms
+
+mydata  <- read.csv( "RV_ALL_FIRMS.csv", header = TRUE )
+Z1      <- as.matrix( mydata$V1 )
+time1   <- as.matrix( mydata$Date )
+data1    <- cbind( time1, Z1 )
+data1    <- as.data.frame( data1 )
+new.data <- type.convert( data1 )
+
+date <- as.Date( as.character(new.data$V1), "%d/%m/%Y")
+RVs  <- as.numeric(new.data$V2)
+
+firm1   <- xts(RVs, date)
+Z2      <- as.matrix( mydata$V2 )
+time1   <- as.matrix( mydata$Date )
+
+data2    <- cbind( time1, Z2 )
+data2    <- as.data.frame( data2 )
+new.data <- type.convert( data2 )
+date     <- as.Date( as.character(new.data$V1), "%d/%m/%Y")
+RVs      <- as.numeric(new.data$V2)
+firm2    <- xts(RVs, date)
+
+# Then the dataset can be created as below
+
+mydata <- read.csv( "RV_ALL_FIRMS.csv", header = TRUE )
+time   <- as.matrix( mydata$Date )
+
+mydata_series <- read.csv( "RV_ALL_FIRMS_new.csv", header = TRUE )
+dataset       <- as.matrix( mydata_series )
+
+mylist <- list()
+for (i in 1:23 )
+{
+  Z <- as.numeric( dataset[ ,i] )
+  data    <- cbind( time, Z )
+  data    <- as.data.frame( data )
+  
+  new.data <- type.convert( data )
+  date <- as.Date( as.character(new.data$V1), "%d/%m/%Y")
+  
+  RVs  <- as.numeric(new.data$Z)
+  firm <- xts(RVs, date)
+  
+  mylist[[i]] <- firm
+  firm <- 0
+}  
+  
+```
+
+Next, we consider the Lasso estimation based on the cross-section of realized volatility measures. 
+
+```R
+
+# Example: Lasso estimation 
+
 cv <- cv.glmnet(x,y,alpha=1,nfolds=10)
 l  <- cv$lambda.min
 alpha <- 1
 
 fits <- glmnet( x, y, family="gaussian", alpha=alpha, nlambda=100)
-
-res <- predict(fits, s=l, type="coefficients")
-res <- as.matrix( res )
-
+res  <- predict(fits, s=l, type="coefficients")
+res  <- as.matrix( res )
 
 ```
+
 
 
 
