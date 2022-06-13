@@ -121,7 +121,7 @@ A commonly used approach for modelling cross-sectional time series data, such as
 
 Consider a Lasso estimation for the cross-sectional Realized Volatility measures of S&P500 with a dependent variable the Realized Volatility measures of a particular firm. Then, the cross-section predictive regression model for an h-period forecast horizon is given by 
 
-$$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \boldsymbol{\beta}_{ij}^{\top} \boldsymbol{X}_{j,t}  + \epsilon_{i, t+h}, \ \ \ \text{for} \ \ t = 1,...,n.$$ 
+$$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \beta^{\top} X_{j,t}  + \epsilon_{i, t+h}, \ \ \ \text{for} \ \ t = 1,...,n.$$ 
 
 
 ```R
