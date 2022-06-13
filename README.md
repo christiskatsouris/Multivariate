@@ -222,6 +222,12 @@ res  <- as.matrix( res )
 
 ```
 
+### References
+
+- Katsouris, C. (2021). Forecast Evaluation in Large Cross-Sections of Realized Volatility. arXiv preprint [arXiv:2112.04887](https://arxiv.org/abs/2112.04887).
+- Gupta, S. (2012). A note on the asymptotic distribution of LASSO estimator for correlated data. Sankhya A, 74(1), 10-28.
+- Masini, R. P., Medeiros, M. C., & Mendes, E. F. (2019). Regularized estimation of high‐dimensional vector autoregressions with weakly dependent innovations. Journal of Time Series Analysis.
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. Journal of the Royal Statistical Society: Series B (Methodological), 58(1), 267-288.
 
 
 
