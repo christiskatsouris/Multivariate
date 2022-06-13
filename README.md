@@ -76,8 +76,8 @@ ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="
 
 ### References
 
-Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
-
+- Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
+- Sharpe, W. F. (1964). Capital asset prices: A theory of market equilibrium under conditions of risk. The journal of finance, 19(3), 425-442.
 
 ## B. Multivariate Linear Regression Model
 
@@ -102,16 +102,29 @@ Consider an adding-up multivariate linear regression model and write code to obt
 ### References
 
 - Berndt, E. R., & Savin, N. E. (1975). Estimation and hypothesis testing in singular equation systems with autoregressive disturbances. Econometrica: Journal of the Econometric Society, 937-957.
-
 - Henshaw Jr, R. C. (1966). Testing single-equation least squares regression models for autocorrelated disturbances. Econometrica: Journal of the Econometric Society, 646-660.
 
 # II. Regression-Based Estimation and Inference
 
-## A. Time-Series Regression with Autoregressive Errors 
+## A. Time-Series Regression with Autocorrelated or Autoregressive Errors 
 
-Consider the time-series regression model below
+Consider the simple linear regression with autocorrelated errors as below
+
+$$y_t = \mu + \alpha t + u_t, \ \ \ \text{for} \ t =1,...,n.$$
+
+Notice that the usual OLS estimators operate under the assumptuon that the ut's are uncorrelated. However, many financial time series data are found to have some autocorrelation structure, therefore the above model is more realistic.   
+
+Consider the time-series regression model with autoregressive error structure as below
 
 $$y_t = x_t^{\top} \beta + u_t, \ \ u_t = \rho u_{t-1} + \epsilon_t, \ \ \ \text{for} \ t =1,...,n.$$
+
+Next, consider the multivariate version of the above model such that
+
+$$Y_t = B X_t + U_t, \ \ U_t = R u_{t-1} + V_t, \ \ \ \text{for} \ t =1,...,n.$$
+
+### Task 3
+
+Using a time-series dataset of your choice and by fitting the above model obtain the estimate of the coefficient matrix B.
 
 ## B. Pooling Cross-Section and Time-Series (Lasso Estimation)  
 
@@ -125,7 +138,7 @@ $$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \beta_{ij}^{\top} X_{j,t}  + \epsilon_{
 
 When the number of cross-sectional units N is large we assume a sparse structure for the parameter vector and for estimation purposes we consider a penalised estimation approach.  
 
-### Task 3 
+### Task 4 
 
 Write your own code in R to estimate the one-period ahead forecasts for each of the firm of the cross-section with covariates being the set of Realized Volatility measures of the other firms (that is, at lag 1 day, lag 1 week, and lag 1 month - in trading days), except of the ones for the i-th firm, using a Lasso shrinkage norm and an appropriate penalty function. Some indicative R code is given below. 
 
