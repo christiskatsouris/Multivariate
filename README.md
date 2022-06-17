@@ -65,7 +65,7 @@ mvmod <- lm(Y ~ rm_rf, weights=w, data=mydata)
 
 ### Task 1
 
-Write your own code that provides estimates for the Unconstrained and Constrained Likelihood-function for the multivariate CAPM model. Using your coding procedure, obtain the log-likelihood statistic for testing the assumptions of the Black CAPM model.  
+Write your own code in [R](https://www.r-project.org/), [Matlab](https://uk.mathworks.com/help/matlab/getting-started-with-matlab.html) or [Stata](https://www.stata.com/bookstore/getting-started-windows/) that provides estimates for the Unconstrained and Constrained Likelihood-function for the multivariate CAPM model. Using your coding procedure, obtain the log-likelihood statistic for testing the assumptions of the Black CAPM model.  
 
 ```R
 
@@ -96,7 +96,7 @@ $$L = \left( 2 \pi \right)^{ - \frac{1}{2} (d-1)(n-1) } | \Omega_n |^{ \frac{ - 
 
 ### Task 2
 
-Consider an adding-up multivariate linear regression model and write code to obtain the maximum likelihood estimation for testing appropriate linear restricitions on the parameters of the model. 
+Consider an adding-up multivariate linear regression model and write your own code in [R](https://www.r-project.org/), [Matlab](https://uk.mathworks.com/help/matlab/getting-started-with-matlab.html) or [Stata](https://www.stata.com/bookstore/getting-started-windows/) to obtain the maximum likelihood estimation for testing appropriate linear restricitions on the parameters of the model. 
 
 
 ### References
@@ -124,7 +124,7 @@ $$Y_t = B X_t + U_t, \ \ U_t = R U_{t-1} + V_t, \ \ \ \text{for} \ t =1,...,n.$$
 
 ### Task 3
 
-Using a time-series dataset of your choice and by fitting the above model obtain the estimate of the coefficient matrix B.
+Using a time-series dataset of your choice and by fitting the above model obtain the estimate of the coefficient matrix B by writing code in [R](https://www.r-project.org/), [Matlab](https://uk.mathworks.com/help/matlab/getting-started-with-matlab.html) or [Stata](https://www.stata.com/bookstore/getting-started-windows/).
 
 ### References
 
@@ -144,7 +144,7 @@ When the number of cross-sectional units N is large we assume a sparse structure
 
 ### Task 4 
 
-Write your own code in R to estimate the one-period ahead forecasts for each of the firm of the cross-section with covariates being the set of Realized Volatility measures of the other firms (that is, at lag 1 day, lag 1 week, and lag 1 month - in trading days), except of the ones for the i-th firm, using a Lasso shrinkage norm and an appropriate penalty function. Some indicative R code is given below. 
+Write your own code in [R](https://www.r-project.org/), [Matlab](https://uk.mathworks.com/help/matlab/getting-started-with-matlab.html) or [Stata](https://www.stata.com/bookstore/getting-started-windows/) to estimate the one-period ahead forecasts for each of the firm of the cross-section with covariates being the set of Realized Volatility measures of the other firms (that is, at lag 1 day, lag 1 week, and lag 1 month - in trading days), except of the ones for the i-th firm, using a Lasso shrinkage norm and an appropriate penalty function. Some indicative R code is given below. 
 
 ```R
 
