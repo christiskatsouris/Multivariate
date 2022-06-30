@@ -132,7 +132,7 @@ Using a time-series dataset of your choice and by fitting the above model obtain
 
 ## B. Pooling Cross-Section and Time-Series (Lasso Estimation)  
 
-A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators.
+A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators. In other words, when p>>n, then the covariates are linearly dependent and X is not a full rank, and therefore the use of Lasso regression (or variable selection methods) is necessary in order to avoid ill-posed estimation problems.
 
 ## Example 2
 
