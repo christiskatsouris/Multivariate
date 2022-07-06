@@ -140,7 +140,7 @@ Consider a Lasso estimation for the cross-sectional Realized Volatility measures
 
 $$y_{i,t+h} = \beta_{i0} + \sum_{j=1}^N  \beta_{ij}^{\top} X_{j,t}  + \epsilon_{i, t+h}, \ \ \ \text{for} \ \ t = 1,...,n.$$ 
 
-When the number of cross-sectional units N is large we assume a sparse structure for the parameter vector and for estimation purposes we consider a penalised estimation approach.  
+When the number of cross-sectional units N is large we assume a sparse structure for the parameter vector and for estimation purposes we consider a penalised estimation approach. Statistical inference under the sparcity scenario when the dimension is larger than the sample size is now an active and challenging field. Although, we focus on the multivariate time series perspective here, which implies the presence of a large cross-section of regressors, we can observe that the dimensionality of the problem can grow fast, and thus a traditional multivariate time series model is replaced with a Lasso-type regularization to handle these challenges.  
 
 ### Task 4 
 
@@ -247,6 +247,8 @@ res  <- as.matrix( res )
 - Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. Journal of the Royal Statistical Society: Series B (Methodological), 58(1), 267-288.
 
 ## [C2]. Vector Autoregression Processes
+
+Lastly, we return back to Vector Autoregression Processes, although not necessarily a high-dimensional VAR(p) process. In practise, we consider the case where the dimension of the time-series vector is less than the sample size n. 
 
 Formally, a p-dimensional vector-valued stationary time series 
 $$ X_t \equiv \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ \text{for} \ \ \ t=1,...,n$$ 
