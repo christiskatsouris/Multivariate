@@ -4,7 +4,7 @@ Learning Objectives: The main focus of this teaching page is to present some key
 
 # I. Likelihood-Based Estimation and Inference
 
-## A. Multivariate CAPM Model
+## [A1.] Multivariate CAPM Model
 
 ## Example 1
 
@@ -79,7 +79,7 @@ ts.plot(abs(keep.const.like), main="Constrained log-likelihood function", xlab="
 - Gibbons, M. R., Ross, S. A., & Shanken, J. (1989). A test of the efficiency of a given portfolio. Econometrica: Journal of the Econometric Society, 1121-1152.
 - Sharpe, W. F. (1964). Capital asset prices: A theory of market equilibrium under conditions of risk. The journal of finance, 19(3), 425-442.
 
-## B. Multivariate Linear Regression Model
+## [B1.] Multivariate Linear Regression Model
 
 Consider the gollowing multivariate linear regression model 
 
@@ -106,7 +106,7 @@ Consider an adding-up multivariate linear regression model and write your own co
 
 # II. Regression-Based Estimation and Inference
 
-## A. Time-Series Regression with Autocorrelated or Autoregressive Errors 
+## [A2.] Time-Series Regression with Autocorrelated or Autoregressive Errors 
 
 Consider the simple linear regression with autocorrelated errors as below
 
@@ -130,7 +130,7 @@ Using a time-series dataset of your choice and by fitting the above model obtain
 
 - Lee, J., & Lund, R. (2004). Revisiting simple linear regression with autocorrelated errors. Biometrika, 91(1), 240-245.
 
-## B. Pooling Cross-Section and Time-Series (Lasso Estimation)  
+## [B2]. Pooling Cross-Section and Time-Series (Lasso Estimation)  
 
 A commonly used approach for modelling cross-sectional time series data, such as Cross-Sectional Realized Volatility measures, which implies the presence of a large number of regressors, often much larger than the time series observations, is to use Lasso-type estimators. In other words, when p>>n, then the covariates are linearly dependent and X is not a full rank, and therefore the use of Lasso regression (or variable selection methods) is necessary in order to avoid ill-posed estimation problems.
 
@@ -246,5 +246,11 @@ res  <- as.matrix( res )
 - Masini, R. P., Medeiros, M. C., & Mendes, E. F. (2019). Regularized estimation of high‐dimensional vector autoregressions with weakly dependent innovations. Journal of Time Series Analysis.
 - Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. Journal of the Royal Statistical Society: Series B (Methodological), 58(1), 267-288.
 
+## [C2]. Vector Autoregression Processes
 
+Formally, a $p-$dimensional vector-valued stationary time series 
+$$\left\{ X_t \right\}_{t=1}^n = \left\{ \left(  X_{1t},..., X_{pt} \right) \right\}_{t=1}^n$$, 
+a VAR model of lag $d$ with serially uncorrelated Gaussian errors take the following form
+$$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + \varepsilon_t, \ \ \ \varepsilon_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_{\varepsilon} ),$$
+where $A_1,..., A_d$ are $p \times p$ matrices and $\varepsilon_t$ is a $p-$dimensional vector of possibly correlated innovation shocks. Therefore, the main objective in VAR models is to estimate the transition matrices $A_1,..., A_d$, together with the order of the model $d$, based on realizations $\left\{ X_0, X_1,..., X_T \right\}$. Furthermore, the structure of the transition matrices provides insights into the complex temporal relationships amongst the $p$ time series and leads to efficient forecasting strategies.   
 
