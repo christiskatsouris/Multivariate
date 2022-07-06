@@ -248,9 +248,9 @@ res  <- as.matrix( res )
 
 ## [C2]. Vector Autoregression Processes
 
-Formally, a $p-$dimensional vector-valued stationary time series 
-$$\left\{ X_t \right\}_{t=1}^n = \left\{ \left(  X_{1t},..., X_{pt} \right) \right\}_{t=1}^n$$, 
+Formally, a p-dimensional vector-valued stationary time series 
+$$( X_t ), t=1,...,n = \left(  X_{1t},..., X_{pt} \right), \ \ t=1,...,n$$, 
 a VAR model of lag $d$ with serially uncorrelated Gaussian errors take the following form
 $$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + \varepsilon_t, \ \ \ \varepsilon_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_{\varepsilon} ),$$
-where $A_1,..., A_d$ are $p \times p$ matrices and $\varepsilon_t$ is a $p-$dimensional vector of possibly correlated innovation shocks. Therefore, the main objective in VAR models is to estimate the transition matrices $A_1,..., A_d$, together with the order of the model $d$, based on realizations $\left\{ X_0, X_1,..., X_T \right\}$. Furthermore, the structure of the transition matrices provides insights into the complex temporal relationships amongst the $p$ time series and leads to efficient forecasting strategies.   
+where A1,..., Ad are (p x p) matrices and \varepsilon_t is a p-dimensional vector of possibly correlated innovation shocks. Therefore, the main objective in VAR models is to estimate the transition matrices A1,..., Ad, together with the order of the model d, based on realizations ( X0, X1,..., Xn ). Furthermore, the structure of the transition matrices provides insights into the complex temporal relationships amongst the $p$ time series and leads to efficient forecasting strategies.   
 
