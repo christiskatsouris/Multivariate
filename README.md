@@ -249,7 +249,7 @@ res  <- as.matrix( res )
 ## [C2]. Vector Autoregression Processes
 
 Formally, a p-dimensional vector-valued stationary time series 
-$$( X_t ), t=1,...,n = \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ t=1,...,n$$ 
+$$ X_t \equiv \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ \text{for} \ \ \ t=1,...,n$$ 
 
 a VAR model of lag $d$ with serially uncorrelated Gaussian errors take the following form
 
