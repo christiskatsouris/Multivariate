@@ -253,7 +253,7 @@ $$( X_t ), t=1,...,n = \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ t=1,...,n$$
 
 a VAR model of lag $d$ with serially uncorrelated Gaussian errors take the following form
 
-$$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + e_t, \ \ \ \varepsilon_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_e )$$
+$$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + e_t, \ \ \ e_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_e )$$
 
 where A1,..., Ad are (p x p) matrices and et is a p-dimensional vector of possibly correlated innovation shocks. Therefore, the main objective in VAR models is to estimate the transition matrices A1,..., Ad, together with the order of the model $d$, based on time series realizations ( X0, X1,..., Xn ). Furthermore, the structure of the transition matrices provides insights into the complex temporal relationships amongst the p time series and leads to efficient forecasting strategies.   
 
