@@ -251,7 +251,7 @@ res  <- as.matrix( res )
 Formally, a p-dimensional vector-valued stationary time series 
 $$ X_t \equiv \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ \text{for} \ \ \ t=1,...,n$$ 
 
-a VAR model of lag $d$ with serially uncorrelated Gaussian errors take the following form
+a VAR model of lag $d$ with serially uncorrelated Gaussian errors takes the following form
 
 $$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + e_t, \ \ \ e_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_e )$$
 
