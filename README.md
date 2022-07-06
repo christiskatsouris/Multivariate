@@ -253,7 +253,7 @@ Lastly, we return back to Vector Autoregression Processes, although not necessar
 Formally, a p-dimensional vector-valued stationary time series 
 $$ X_t \equiv \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ \text{for} \ \ \ t=1,...,n$$ 
 
-a VAR model of lag $d$ with serially uncorrelated Gaussian errors takes the following form
+can be modelled using a VAR representation of lag $d$ with serially uncorrelated Gaussian errors, which takes the following form
 
 $$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + e_t, \ \ \ e_t \sim \mathcal{N} ( \boldsymbol{0}, \boldsymbol{\Sigma}_e )$$
 
