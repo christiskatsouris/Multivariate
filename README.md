@@ -259,3 +259,8 @@ $$X_t = A_1 X_{t-1} + ... + A_d X_{t-d} + e_t, \ \ \ e_t \sim \mathcal{N} ( \bol
 
 where A1,..., Ad are (p x p) matrices and et is a p-dimensional vector of possibly correlated innovation shocks. Therefore, the main objective in VAR models is to estimate the transition matrices A1,..., Ad, together with the order of the model $d$, based on time series realizations ( X0, X1,..., Xn ). Furthermore, the structure of the transition matrices provides insights into the complex temporal relationships amongst the p time series and the particular representation provides a way to apply forecasting techniques.   
 
+# Disclaimer
+
+The author declares no conflicts of interest.
+
+The proposed Course Syllabus is currently under development and has not been officially undergone quality checks. All rights reserved.
