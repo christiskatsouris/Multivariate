@@ -279,12 +279,12 @@ library(rmgarch)
 library(parallel)
 
 ## Using the R package 'parallel' 
-cl = makePSOCKcluster(4)
-multf = multifit(uspec, Dat, cluster = cl)
+cl    <- makePSOCKcluster(4)
+multf <- multifit(uspec, Dat, cluster = cl)
 
 ## Import the dataset 
 data(dji30retw)
-Dat = dji30retw[, 1:10, drop = FALSE]
+Dat <- dji30retw[, 1:10, drop = FALSE]
 
 ############################################
 # Example 1: Estimating CCC-GARCH model in R
@@ -294,27 +294,27 @@ Dat = dji30retw[, 1:10, drop = FALSE]
 
 # EXAMPLE 1: eGARCH model
 
-xspec = ugarchspec(mean.model = list(armaOrder = c(1,0)), variance.model = list(garchOrder = c(1,1), model = 'eGARCH'), distribution.model = 'norm')
-uspec = multispec(replicate(10, xspec))
+xspec <- ugarchspec(mean.model = list(armaOrder = c(1,0)), variance.model = list(garchOrder = c(1,1), model = 'eGARCH'), distribution.model = 'norm')
+uspec <- multispec(replicate(10, xspec))
 
-spec1 = dccspec(uspec = uspec, dccOrder = c(1, 1), distribution = 'mvnorm')
-spec1a = dccspec(uspec = uspec, dccOrder = c(1, 1), model='aDCC', distribution = 'mvnorm')
+spec1  <- dccspec(uspec = uspec, dccOrder = c(1, 1), distribution = 'mvnorm')
+spec1a <- dccspec(uspec = uspec, dccOrder = c(1, 1), model='aDCC', distribution = 'mvnorm')
 
-spec2 = dccspec(uspec = uspec, dccOrder = c(1, 1), distribution = 'mvlaplace')
-spec2a = dccspec(uspec = uspec, dccOrder = c(1, 1), model='aDCC', distribution = 'mvlaplace')
+spec2  <- dccspec(uspec = uspec, dccOrder = c(1, 1), distribution = 'mvlaplace')
+spec2a <- dccspec(uspec = uspec, dccOrder = c(1, 1), model='aDCC', distribution = 'mvlaplace')
 
 # We can improve the estimation accuracy and robustness of the Multivariate DCC-Garch Model 
 # by including a set of exogenous variables, such as a set of macroeconomic variables 
 
-vfit = varxfit( X=Data, p=1, exogen = NULL , robust = FALSE, gamma = 0.25, delta = 0.01, nc = 10, ns = 500, postpad = "constant")
-vfit = varxfit( X=Data, p=1, exogen = macro , robust = FALSE, gamma = 0.25, delta = 0.01, nc = 10, ns = 500, postpad = "constant")
+vfit  <- varxfit( X=Data, p=1, exogen = NULL , robust = FALSE, gamma = 0.25, delta = 0.01, nc = 10, ns = 500, postpad = "constant")
+vfit  <- varxfit( X=Data, p=1, exogen = macro , robust = FALSE, gamma = 0.25, delta = 0.01, nc = 10, ns = 500, postpad = "constant")
 
-uspec = ugarchspec( mean.model = list(armaOrder = c(0,0), include.mean = FALSE), variance.model = list(garchOrder = c(1,1), model = "sGARCH"), distribution.model = "norm" )
-spec  = dccspec(uspec = multispec( replicate(3, uspec) ), VAR = TRUE, lag = 1, dccOrder = c(1,1), distribution = "mvnorm")
-fit   = dccfit(spec, data = Data, fit.control = list(eval.se=TRUE), VAR.fit = vfit)
+uspec <- ugarchspec(mean.model = list(armaOrder = c(0,0), include.mean = FALSE), variance.model = list(garchOrder = c(1,1), model = "sGARCH"), distribution.model = "norm")
+spec  <- dccspec(uspec = multispec( replicate(3, uspec) ), VAR = TRUE, lag = 1, dccOrder = c(1,1), distribution = "mvnorm")
+fit   <- dccfit(spec, data = Data, fit.control = list(eval.se=TRUE), VAR.fit = vfit)
 
-dcc.focast    = dccforecast( fit, n.ahead = 1, n.roll = 0 ) 
-covmat.focast = rcov(dcc.focast)
+dcc.focast    <- dccforecast( fit, n.ahead = 1, n.roll = 0 ) 
+covmat.focast <- rcov(dcc.focast)
 
 ```
 
