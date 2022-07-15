@@ -251,7 +251,8 @@ res  <- as.matrix( res )
 Lastly, we return back to Vector Autoregression Processes, although not necessarily a high-dimensional VAR(p) process. In practise, we consider the case where the dimension of the time-series vector is less than the sample size n. 
 
 Formally, a p-dimensional vector-valued stationary time series 
-$$ X_t \equiv \left(  X_{1t},..., X_{pt} \right), \ \ \ \ \ \text{for} \ \ \ t=1,...,n$$ 
+
+$$ X_t = (  X_{1t},..., X_{pt} ), \ \ \ \ \ t=1,...,n$$ 
 
 can be modelled using a VAR representation of lag $d$ with serially uncorrelated Gaussian errors, which takes the following form
 
@@ -261,6 +262,6 @@ where A1,..., Ad are (p x p) matrices and et is a p-dimensional vector of possib
 
 # Disclaimer
 
-The author declares no conflicts of interest.
+The author (Christis G. Katsouris ) declares no conflicts of interest.
 
 The proposed Course Syllabus is currently under development and has not been officially undergone quality checks. All rights reserved.
