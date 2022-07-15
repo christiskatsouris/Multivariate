@@ -262,6 +262,6 @@ where A1,..., Ad are (p x p) matrices and et is a p-dimensional vector of possib
 
 # Disclaimer
 
-The author (Christis G. Katsouris ) declares no conflicts of interest.
+The author (Christis G. Katsouris) declares no conflicts of interest.
 
 The proposed Course Syllabus is currently under development and has not been officially undergone quality checks. All rights reserved.
